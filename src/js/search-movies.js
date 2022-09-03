@@ -74,7 +74,7 @@ function templatePrintMovies(movie) {
 	const { Title, Type, Year, Poster, imdbID } = movie;
 
 	return `
-      <div class="card-movie pb-4 w-full shadow-md flex flex-col sm:w-80 bg-white dark:ring-1 dark:bg-slate-800 rounded dark:ring-white/10 dark:shadow-lg" id="${imdbID}">
+      <div class="card-movie pb-4 w-full shadow-md flex flex-col bg-white dark:ring-1 dark:bg-slate-800 rounded dark:ring-white/10 dark:shadow-lg" id="${imdbID}">
             <div class="h-72">
               <img src="${Poster}" alt="${Title}" class="h-full w-full object-cover object-top rounded-tl rounded-tr" />
             </div>
@@ -98,7 +98,7 @@ function printMovies(movie) {
 
 	const movies = document.createElement('div');
 
-	movies.setAttribute('class', 'flex flex-wrap gap-y-10 gap-x-5');
+	movies.setAttribute('class', 'flex flex-wrap gap-y-10 gap-x-5 sm:grid sm:grid-cols-2');
 	movies.innerHTML = movie;
 
 	const textResult = document.createElement('h2');
